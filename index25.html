@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html>
+
+<head>
+    <title>Анимация с помощью js</title>
+    <style>
+        #square {
+
+            width: 100px;
+            height: 100px;
+            position: absolute;
+            background-color: #333;
+            left: 0px;
+            top: 50px;
+        }
+    </style>
+    <script>
+        function moveSquare() {
+            for (i = 0; i < 500; i++) {
+                document.getElementById("square").style.left = i + "px";
+            }
+        }
+
+    </script>
+
+</head>
+
+<body onload="moveSquare();">
+    <div id="square"">
+        
+    </div>
+    
+</body>
+
+</html>

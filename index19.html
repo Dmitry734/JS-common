@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Приложение для счета</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="">
+    <script>
+        var TheCount = 0; // global variable
+        window.onload = initilizer;
+        function initilizer() {
+            document.getElementById("incrementButton").onclick = increaseCount;
+
+        };
+        function increaseCount() {
+            TheCount++;
+            document.getElementById("CurrentCount").innerHTML = TheCount;
+        };
+
+    </script>
+</head>
+
+<body>
+    <h1> Щелкните по кнопке для счета</h1>
+    <p>Текущее значение: <span id="CurrentCount">0</span></p>
+    <button id="incrementButton">Увеличить счетчик</button>
+</body>
+
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>DOM модель документа. GetElementByID</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="">
+    <script>
+        function calculateMPG(miles, gallons) {
+            document.getElementById("displayMiles").innerHTML = parseInt(miles);
+            document.getElementById("displayGallons").innerHTML = parseInt(gallons);
+            document.getElementById("displayMPG").innerHTML = miles / gallons;
+        };
+    </script>
+</head>
+
+<body>
+    <p>Вы проехали <span id="displayMiles">____</span> км.</p>
+    <p>Вы использовали <span id="displayGallons">____</span> литров бензина</p>
+    <p>Пробег на 1 л. топлива <span id="displayMPG">____</span> км</p>
+    <script>
+        var milesDriven = prompt('Введите пробег (км): ');
+        var gallonsGas = prompt('Введите расход бензина (л): ');
+        calculateMPG(milesDriven, gallonsGas);
+    </script>
+</body>
+
+</html>

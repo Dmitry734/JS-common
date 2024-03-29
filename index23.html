@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html>
+
+<head>
+    <title>Математическая забава</title>
+    <style>
+        #theText {
+            font-size: 18px;
+        }
+
+        h1 {
+            border: 1px solid #000;
+            background-color: #dadada;
+        }
+
+        #capEvent,
+        #bubEvent {
+            background-color: #777;
+        }
+    </style>
+    <script>
+        function registerEvents() {
+            document.mathWiz.operate.addEventListener('click', doTheMath, false);
+        };
+        function doTheMath() {
+            var first = parseInt(document.mathWiz.numberOne.value);
+            var second = parseInt(document.mathWiz.numberTwo.value);
+            var operator = (document.mathWiz.operator.value);
+            switch (operator) {
+                case 'add':
+                    var answer = first + second;
+                    break;
+                case 'subtract':
+                    var answer = first - second;
+                    break;
+                case 'multiply':
+                    var answer = first * second;
+                    break;
+                case 'divide':
+                    var answer = first / second;
+            };
+            document.mathWiz.theResult.value = answer;
+        };
+    </script>
+
+</head>
+
+<body onload="registerEvents();">
+    <form name="mathWiz">
+        <label>Первое число: <input type="number" name="numberOne" /> </label> <br>
+        <label>Второе число: <input type="number" name="numberTwo" /> </label>
+        <label>Оператор:
+            <select name="operator">
+                <option value="add"> + </option>
+                <option value="subtract"> - </option>
+                <option value="multiply"> * </option>
+                <option value="divide"> / </option>
+            </select>
+        </label>
+        <br>
+        <input type="button" name="operate" value="Bычиcлить!" /> <br>
+        <label>Результат: <input type="number" name="theResult" />
+        </label>
+    </form>
+</body>
+
+</html>
